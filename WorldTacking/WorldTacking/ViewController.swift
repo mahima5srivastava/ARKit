@@ -36,5 +36,17 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func resetTapped(_ sender: Any) {
+        resetSession()
+        
+    }
+    
+    func resetSession() {
+        self.sceneView.session.pause()
+        self.sceneView.scene.rootNode.enumerateChildNodes{ (node, _ ) in
+            node.removeFromParentNode()
+        }
+        self.sceneView.session.run(configuration, options: [.removeExistingAnchors, .resetTracking])
+    }
 }
 
