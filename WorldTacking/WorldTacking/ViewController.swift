@@ -9,6 +9,12 @@
 import UIKit
 import ARKit
 
+enum Shapes: Int {
+    case box = 0
+    case capsule
+    case cone
+}
+
 class ViewController: UIViewController {
     
     //MARK:- IBOutlets
@@ -28,17 +34,21 @@ class ViewController: UIViewController {
 
     //MARK:- IBActions
     
-    @IBAction func addTapped(_ sender: Any) {
+    @IBAction func addShapeTapped(_ sender: Any) {
+        guard let tag = (sender as? UIButton)?.tag, let shape = Shapes(rawValue: tag) else {return}
         let node = SCNNode()
-        node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1/2)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        switch shape {
+        case .box: node.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.1)
+        case .capsule: node.geometry = SCNCapsule(capRadius: 0.1, height: 0.5)
+        case .cone: node.geometry = SCNCone(topRadius: 0, bottomRadius: 0.1, height: 0.4)
+        }
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.random
         node.geometry?.firstMaterial?.specular.contents = UIColor.white
-        let xPoint = getRandomPoint(between: -0.2, secondPoint: 0.2)
-        let yPoint = getRandomPoint(between: -0.2, secondPoint: 0.2)
-        let zPoint = getRandomPoint(between: -0.2, secondPoint: 0.2)
+        let xPoint = CGFloat.random(in: -0.2...0.2)
+        let yPoint = CGFloat.random(in: -0.2...0.2)
+        let zPoint = CGFloat.random(in: -0.2...0.2)
         node.position = SCNVector3(xPoint, yPoint, zPoint)
         sceneView.scene.rootNode.addChildNode(node)
-        
     }
     
     @IBAction func resetTapped(_ sender: Any) {
@@ -54,20 +64,6 @@ class ViewController: UIViewController {
             node.removeFromParentNode()
         }
         self.sceneView.session.run(configuration, options: [.removeExistingAnchors, .resetTracking])
-    }
-    
-    private func getRandomPoint(between firstPoint: CGFloat, secondPoint: CGFloat) -> CGFloat {
-        guard firstPoint != secondPoint else {return firstPoint}
-        var nearPoint = firstPoint
-        var farPoint = secondPoint
-        if nearPoint > farPoint {
-            var temp = nearPoint
-            nearPoint = farPoint
-            farPoint = temp
-        }
-        
-        let random = CGFloat.random(in: nearPoint..<farPoint)
-        return CGFloat(random)
     }
     
 }

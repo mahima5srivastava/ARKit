@@ -18,40 +18,68 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="la4-yA-a7M">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb6-1C-7lD">
-                                <rect key="frame" x="20" y="762" width="80" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="7TS-lC-Olh"/>
-                                    <constraint firstAttribute="height" constant="80" id="cz5-y4-9Zi"/>
-                                </constraints>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="addTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bxu-x5-0sQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U88-mT-E3L">
-                                <rect key="frame" x="314" y="762" width="80" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="2pK-dn-X05"/>
-                                    <constraint firstAttribute="height" constant="80" id="5QN-WC-y6G"/>
-                                </constraints>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNG-7L-cHm"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-Kg-bWB">
+                                <rect key="frame" x="20" y="762" width="374" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb6-1C-7lD">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="cz5-y4-9Zi"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Box"/>
+                                        <connections>
+                                            <action selector="addShapeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2l-xh-AsQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ydY-rv-PtG">
+                                        <rect key="frame" x="96" y="0.0" width="86" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7Pz-ez-dAz"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="ERj-1R-08s"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Oq7-jW-XBc"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Capsule"/>
+                                        <connections>
+                                            <action selector="addShapeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kas-6U-t9C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Asm-Np-hrC">
+                                        <rect key="frame" x="192" y="0.0" width="86" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="A02-i2-Z7C"/>
+                                            <constraint firstAttribute="height" constant="80" id="AQc-H8-Z5u"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="V1e-3N-Zlr"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Cone"/>
+                                        <connections>
+                                            <action selector="addShapeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYI-e9-WUi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U88-mT-E3L">
+                                        <rect key="frame" x="288" y="0.0" width="86" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="5QN-WC-y6G"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNG-7L-cHm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fb6-1C-7lD" secondAttribute="bottom" constant="20" id="37T-vn-er3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U88-mT-E3L" secondAttribute="trailing" constant="20" id="3Yz-2U-Z34"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v3b-Kg-bWB" secondAttribute="trailing" constant="20" id="6St-jF-mdS"/>
                             <constraint firstItem="la4-yA-a7M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AUQ-3C-d4j"/>
                             <constraint firstItem="la4-yA-a7M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DDg-o4-Big"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U88-mT-E3L" secondAttribute="bottom" constant="20" id="Ejr-SM-vQ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v3b-Kg-bWB" secondAttribute="bottom" constant="20" id="OEZ-3h-3yD"/>
+                            <constraint firstItem="v3b-Kg-bWB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Sip-Zq-XzH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="la4-yA-a7M" secondAttribute="trailing" id="TM3-Ip-Ktz"/>
-                            <constraint firstItem="fb6-1C-7lD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="reX-RH-tEA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="la4-yA-a7M" secondAttribute="bottom" id="toL-op-8B3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

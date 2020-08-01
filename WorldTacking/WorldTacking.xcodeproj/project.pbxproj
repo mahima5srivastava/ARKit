@@ -16,6 +16,8 @@
 		D4F4D43024D537A80068D464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F4D42E24D537A80068D464 /* LaunchScreen.storyboard */; };
 		D4F4D43B24D537A80068D464 /* WorldTackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4D43A24D537A80068D464 /* WorldTackingTests.swift */; };
 		D4F4D44624D537A80068D464 /* WorldTackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4D44524D537A80068D464 /* WorldTackingUITests.swift */; };
+		D4FFBB1124D56CFD00563296 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFBB1024D56CFD00563296 /* CGFloat+Extension.swift */; };
+		D4FFBB1324D56D4600563296 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFBB1224D56D4600563296 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D4F4D44124D537A80068D464 /* WorldTackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTackingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F4D44524D537A80068D464 /* WorldTackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTackingUITests.swift; sourceTree = "<group>"; };
 		D4F4D44724D537A80068D464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FFBB1024D56CFD00563296 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		D4FFBB1224D56D4600563296 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				D4F4D42E24D537A80068D464 /* LaunchScreen.storyboard */,
 				D4F4D43124D537A80068D464 /* Info.plist */,
 				D4F4D42924D537A70068D464 /* WorldTacking.xcdatamodeld */,
+				D4FFBB1024D56CFD00563296 /* CGFloat+Extension.swift */,
+				D4FFBB1224D56D4600563296 /* UIColor+Extension.swift */,
 			);
 			path = WorldTacking;
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 				D4F4D42524D537A70068D464 /* ViewController.swift in Sources */,
 				D4F4D42124D537A70068D464 /* AppDelegate.swift in Sources */,
 				D4F4D42B24D537A70068D464 /* WorldTacking.xcdatamodeld in Sources */,
+				D4FFBB1324D56D4600563296 /* UIColor+Extension.swift in Sources */,
 				D4F4D42324D537A70068D464 /* SceneDelegate.swift in Sources */,
+				D4FFBB1124D56CFD00563296 /* CGFloat+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
