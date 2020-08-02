@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     @IBAction func addTapped(_ sender: Any) {
         let pyramidNode = SCNNode()
         pyramidNode.geometry = SCNPyramid(width: 0.1, height: 0.1, length: 0.1)
-        pyramidNode.position = SCNVector3(x: 0.0, y: 0.0, z: -0.1)
+        pyramidNode.position = SCNVector3(x: 0.0, y: 0.0, z: -0.12)
         pyramidNode.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
         pyramidNode.geometry?.firstMaterial?.specular.contents = UIColor.white
         pyramidNode.eulerAngles = SCNVector3(90.radianValue(), 0, 0)
