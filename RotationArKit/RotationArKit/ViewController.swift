@@ -40,8 +40,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetTapped(_ sender: Any) {
-        sceneView.session.pause()
+        resetSession()
         
+    }
+    private func resetSession() {
+        self.sceneView.session.pause()
+        self.sceneView.scene.rootNode.enumerateChildNodes{ (node, _ ) in
+            node.removeFromParentNode()
+        }
+        self.sceneView.session.run(configuration, options: [.removeExistingAnchors, .resetTracking])
     }
 }
 
