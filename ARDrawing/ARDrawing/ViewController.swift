@@ -55,8 +55,6 @@ extension ViewController: ARSCNViewDelegate {
                 self.sceneView.scene.rootNode.addChildNode(pointer)
             }
         }
-        
-        
     }
 }
 
