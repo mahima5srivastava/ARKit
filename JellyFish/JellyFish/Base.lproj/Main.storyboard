@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JellyFish" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plc-8l-rRR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cst-CT-wJi">
+                                <rect key="frame" x="20" y="742" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="qDw-0Z-Zl8"/>
+                                    <constraint firstAttribute="height" constant="100" id="sRQ-Ex-Wds"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVh-PJ-BB0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuU-ro-hEh">
+                                <rect key="frame" x="294" y="742" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zy0-fK-uWN"/>
+                                    <constraint firstAttribute="height" constant="100" id="jXZ-sX-DSC"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QF4-fG-Eba"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Plc-8l-rRR" secondAttribute="trailing" id="8Oh-kx-acb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wuU-ro-hEh" secondAttribute="bottom" constant="20" id="Fj4-eU-S1L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cst-CT-wJi" secondAttribute="bottom" constant="20" id="M8E-MK-di6"/>
+                            <constraint firstItem="Plc-8l-rRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XfT-BX-yrf"/>
+                            <constraint firstItem="Plc-8l-rRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e5G-fM-FHp"/>
+                            <constraint firstItem="Cst-CT-wJi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hJr-XC-vNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Plc-8l-rRR" secondAttribute="bottom" id="ikC-Jh-IUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wuU-ro-hEh" secondAttribute="trailing" constant="20" id="wfi-qt-Bfl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="Cst-CT-wJi" id="JSn-Zn-RPK"/>
+                        <outlet property="resetButton" destination="wuU-ro-hEh" id="jMP-GX-DMO"/>
+                        <outlet property="sceneView" destination="Plc-8l-rRR" id="VjY-I1-99j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
